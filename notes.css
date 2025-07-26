@@ -1,0 +1,139 @@
+/* Styles for Idea Notepad / Quote Collector */
+
+.notes-main h2 {
+  color: var(--primary-color);
+  font-family: var(--font-mono-alt);
+  margin-bottom: 1.5rem;
+}
+
+#note-form {
+  background: var(--glass-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.3);
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a3d;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  transition: border-color 0.3s;
+  resize: vertical;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.add-note-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+}
+
+.search-container {
+  max-width: 700px;
+  margin: 0 auto 1rem auto;
+}
+
+#search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a3d;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  transition: border-color 0.3s;
+}
+
+#search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.notes-list {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  background: var(--glass-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.3);
+  padding: 1rem;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  min-height: 150px;
+}
+
+.note-item {
+  border-bottom: 1px solid #444;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-item:last-child {
+  border-bottom: none;
+}
+
+.note-text {
+  flex: 1;
+  white-space: pre-wrap;
+}
+
+.note-tag {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+.note-actions button {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-left: 0.5rem;
+  transition: color 0.3s;
+}
+
+.note-actions button:hover {
+  color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #note-form,
+  .search-container,
+  .notes-list {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
