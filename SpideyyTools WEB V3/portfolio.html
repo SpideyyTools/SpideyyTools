@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offline Portfolio Generator - SpideyyTools</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-spider fa-2x"></i>
+        <h1>SpideyyTools</h1>
+      </div>
+      <nav class="nav-bar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="invoice.html" class="nav-link">Quick Invoice</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio Generator</a>
+        <a href="notes.html" class="nav-link">Idea Notepad</a>
+        <a href="budget.html" class="nav-link">Budget Tracker</a>
+      </nav>
+    </header>
+
+    <main class="main-content portfolio-main">
+      <h2>Offline Portfolio Generator</h2>
+      <form id="portfolio-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="bio">Bio</label>
+          <textarea id="bio" name="bio" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="projects">Project Links (comma separated URLs)</label>
+          <input type="text" id="projects" name="projects" placeholder="https://project1.com, https://project2.com" />
+        </div>
+        <button type="submit" class="btn generate-btn">Preview Portfolio</button>
+      </form>
+
+      <section id="portfolio-preview" class="portfolio-preview" style="display:none;">
+        <!-- Portfolio preview will be rendered here -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2024 SpideyyTools. Made with ❤️ by Vineet Maurya.</p>
+    </footer>
+  </div>
+
+  <script src="js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Styles for Quick Invoice Generator */
+
+.invoice-main h2 {
+  color: var(--primary-color);
+  font-family: var(--font-mono-alt);
+  margin-bottom: 1.5rem;
+}
+
+#invoice-form {
+  background: var(--glass-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.3);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #2a2a3d;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  transition: border-color 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+#items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+#items-table th,
+#items-table td {
+  border: 1px solid #444;
+  padding: 0.5rem;
+  text-align: left;
+  font-family: var(--font-mono);
+  color: var(--text-color);
+}
+
+#items-table th {
+  background-color: #2a2a3d;
+}
+
+#items-table tbody tr:hover {
+  background-color: rgba(114, 137, 218, 0.1);
+}
+
+#add-item-btn {
+  margin-bottom: 1rem;
+}
+
+.total-amount {
+  text-align: right;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.generate-btn,
+.download-btn {
+  margin-right: 1rem;
+}
+
+.invoice-display {
+  background: var(--glass-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(114, 137, 218, 0.3);
+  max-width: 800px;
+  margin: 2rem auto 0 auto;
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #items-table th,
+  #items-table td {
+    font-size: 0.9rem;
+  }
+}
